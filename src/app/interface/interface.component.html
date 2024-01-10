@@ -1,1 +1,19 @@
-Hiii
+<!-- Header Section -->
+<mat-toolbar>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <ng-container *ngIf="(userDetails$ | async) as userDetails ; else noUser">
+        <div>
+            {{userDetails}}
+        </div>
+    </ng-container>
+    <ng-template #noUser>
+        <div>
+            User No
+        </div>
+    </ng-template>
+    
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+  <!-- Header Section Ends -->

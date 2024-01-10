@@ -21,6 +21,11 @@ const INTERFACE_ROUTES: Routes = [
         path: '',
         loadChildren: () => import('../routes/home-page/home-page.module').then(m => m.HomePageModule)
       },
+      {
+        canActivate: [],
+        path: 'todo-list',
+        loadChildren: () => import('../routes/todo-list-view/todo-list-view.module').then(m => m.TodoListViewModule)
+      },
     ]
   }
 

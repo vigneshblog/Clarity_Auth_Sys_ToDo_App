@@ -1,5 +1,7 @@
 import { Component, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { UserStore } from 'src/app/shared/stores/user-store';
 
 @Component({
   selector: 'app-home-page',
@@ -9,9 +11,12 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class HomePageComponent {
 
 
+  public userName : string = '';
+
   
   constructor(
-    
+    private userStore : UserStore,
+    private router : Router
   ){
     
   }
@@ -20,6 +25,13 @@ export class HomePageComponent {
     
    
 
+
+  }
+
+  public onSubmit(){
+
+    this.userStore.setUserDetails(this.userName);
+    this.router.navigate(['/todo-list']);
 
   }
 
