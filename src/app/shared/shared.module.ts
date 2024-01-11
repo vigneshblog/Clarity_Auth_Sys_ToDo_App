@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { PrimeNgModule } from '../prime-ng.module';
+import { AddTaskComponent } from './modals/add-task/add-task.component';
 
 
 
@@ -16,6 +17,8 @@ import { PrimeNgModule } from '../prime-ng.module';
 
   declarations: [
    
+  
+    AddTaskComponent
   ],
 
   providers: [

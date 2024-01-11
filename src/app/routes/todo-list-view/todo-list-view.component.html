@@ -1,0 +1,30 @@
+<div id="task-container">
+    <div>
+        Your Tasks
+    </div>
+    <div class="btn-holder">
+        <button type="button" class="btn btn-primary" (click)="showModal()">Add New Task</button>
+        <button type="button" class="btn btn-secondary" (click)="submitTasks()">Submit</button>
+    </div>
+    
+    <div id="card-task">
+        <div class="m-3" *ngFor="let task of tasks; let i=index">
+            <div class="p-2 shadow border" id="tasks" >
+                <div class="input-group row ps-3" >
+                    <div class="card col-md-10 border-0"> {{task.taskName}} </div>
+                    <!-- <div class="col me-1">
+                        <span>{{task.status ? 'Done' : 'Pending'}}</span>
+                    </div> -->
+                    <!-- <button class="btn btn-outline-primary col me-2" data-bs-toggle="modal" type="button" data-bs-target="#exampleModal" ><i class="fa fa-edit" aria-hidden="true"> </i> </button> -->
+                    <button class="col" [ngClass]="task.status ? 'btn btn-success' : 'btn btn-warning'" (click)="statusChange(i)">
+                        <i class="fa fa-check" [ngClass]="task.status ? 'fa fa-check' : 'fa fa-exclamation'" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+

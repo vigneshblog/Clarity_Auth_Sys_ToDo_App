@@ -1,0 +1,14 @@
+#task-container{
+    padding: 20px 80px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#tasks:hover {
+    transform: scale(1.01);
+}
+
+#card-task{
+    width: 50em;
+}
